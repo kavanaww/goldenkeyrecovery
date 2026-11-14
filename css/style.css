@@ -1,0 +1,138 @@
+/* Golden Key Recovery. Brand: black, gold, white. Saira Semi Condensed + Public Sans. */
+
+@font-face{font-family:"Saira Semi Condensed";src:url("../assets/fonts/saira-semi-condensed-latin-600-normal.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Saira Semi Condensed";src:url("../assets/fonts/saira-semi-condensed-latin-800-normal.woff2") format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:"Public Sans";src:url("../assets/fonts/public-sans-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Public Sans";src:url("../assets/fonts/public-sans-latin-600-normal.woff2") format("woff2");font-weight:600;font-display:swap}
+
+:root{
+  --bg:#0F0E0B; --bg-alt:#17150F; --panel:#1D1A13;
+  --fg:#F7F4EC; --muted:#C6BEAC; --line:#3F3829;
+  --gold:#E8C867; --gold-deep:#CF9C40; --on-gold:#0F0E0B;
+  --error:#FFB4A8;
+  --display:"Saira Semi Condensed","Arial Narrow",Arial,sans-serif;
+  --text:"Public Sans",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--text);font-size:1.0625rem;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ul{margin:0}
+ul{padding:0;list-style:none}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-underline-offset:.18em}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+.wrap{width:100%;max-width:1080px;margin-inline:auto;padding-inline:max(20px,env(safe-area-inset-left,0px)) max(20px,env(safe-area-inset-right,0px))}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;z-index:50;background:var(--gold);color:var(--on-gold);padding:8px 12px;border-radius:6px}
+
+.label{font-family:var(--display);font-weight:600;font-size:.875rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.05;letter-spacing:.005em;text-wrap:balance}
+h1{font-size:clamp(2.6rem,8vw,5rem);text-transform:uppercase}
+h2{font-size:clamp(1.9rem,5vw,3rem);margin-top:10px}
+h3{font-size:1.375rem;font-weight:600}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:8px;border:2px solid transparent;font-family:var(--display);font-weight:800;font-size:1.0625rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.btn-gold{background:var(--gold);color:var(--on-gold)}
+.btn-gold:hover{background:#F2D98A}
+.btn-line{border-color:var(--gold);color:var(--gold)}
+.btn-line:hover{background:var(--gold);color:var(--on-gold)}
+.btn-sm{min-height:42px;padding:0 18px;font-size:.9375rem}
+.btn-wide{width:100%}
+
+/* Top strip and header */
+.strip{background:var(--gold);color:var(--on-gold);text-align:center;font-size:.875rem;line-height:1.3;padding:7px 16px}
+.strip a{font-weight:600}
+.head{position:sticky;top:0;z-index:20;background:rgba(15,14,11,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.head-row{display:flex;align-items:center;gap:16px;min-height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto}
+.brand-mark{width:44px;height:44px}
+.brand-word{width:156px}
+.nav{display:flex;gap:26px}
+.nav a{font-family:var(--display);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.9375rem;text-decoration:none;color:var(--muted)}
+.nav a:hover{color:var(--gold)}
+
+/* Hero */
+.hero{position:relative;isolation:isolate;display:grid;place-items:center;min-height:min(86vh,820px);padding-block:72px;overflow:hidden;text-align:center;
+  background:radial-gradient(120% 90% at 50% 0%,#2A2416 0%,var(--bg) 62%)}
+.hero-media,.hero-tint{position:absolute;inset:0;z-index:-1}
+.hero-media{display:none}
+.hero-video{width:100%;height:100%;object-fit:cover}
+.hero[data-video="on"] .hero-media{display:block}
+.hero[data-video="on"] .hero-tint{background:linear-gradient(180deg,rgba(15,14,11,.62) 0%,rgba(15,14,11,.5) 45%,rgba(15,14,11,.88) 100%)}
+.hero-inner{display:flex;flex-direction:column;align-items:center;gap:18px}
+.hero-mark{width:132px;height:132px;margin-bottom:6px}
+.lead{font-size:clamp(1.125rem,2.4vw,1.375rem);color:var(--fg);max-width:34ch;text-wrap:balance}
+.cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:10px}
+
+/* Bands */
+.band{padding-block:clamp(56px,9vw,104px);border-top:1px solid var(--line)}
+.band-alt{background:var(--bg-alt)}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:26px 24px 28px}
+.num{font-family:var(--display);font-weight:800;font-size:.9375rem;letter-spacing:.14em;color:var(--gold)}
+.card h3{margin:10px 0 8px}
+.card p{color:var(--muted)}
+
+/* About */
+.about{display:grid;grid-template-columns:280px 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+.portrait{width:280px;height:280px;border-radius:50%;object-fit:cover;border:3px solid var(--gold)}
+.role{font-family:var(--display);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:6px 0 16px}
+.about-text p:not(.label):not(.role){color:var(--muted);max-width:58ch}
+.creds{margin-top:20px;display:grid;gap:8px}
+.creds li{position:relative;padding-left:22px}
+.creds li::before{content:"";position:absolute;left:0;top:.55em;width:9px;height:9px;background:var(--gold);transform:rotate(45deg)}
+
+/* Form */
+.form-wrap{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(28px,5vw,64px);align-items:start}
+.form-head p:not(.label){color:var(--muted);margin-top:14px;max-width:40ch}
+.form{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:clamp(20px,3.5vw,32px);display:grid;gap:18px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:grid;gap:6px;min-width:0}
+label{font-weight:600;font-size:.9375rem}
+.opt{font-weight:400;color:var(--muted)}
+input,select,textarea{width:100%;min-height:50px;padding:12px 14px;background:var(--bg);color:var(--fg);border:1.5px solid var(--line);border-radius:8px;font:inherit;font-size:1rem}
+textarea{resize:vertical;min-height:108px}
+select{appearance:none;-webkit-appearance:none;padding-right:40px;background-image:linear-gradient(45deg,transparent 50%,var(--gold) 50%),linear-gradient(135deg,var(--gold) 50%,transparent 50%);background-position:calc(100% - 20px) 55%,calc(100% - 14px) 55%;background-size:6px 6px;background-repeat:no-repeat}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(232,200,103,.25)}
+.invalid{border-color:var(--error)}
+.form-error{color:var(--error);font-size:.9375rem}
+.fine{font-size:.875rem;color:var(--muted)}
+.form .fine{text-align:center}
+[hidden]{display:none !important}
+
+.done{background:var(--panel);border:1px solid var(--gold);border-radius:14px;padding:clamp(28px,5vw,48px);text-align:center;display:grid;justify-items:center;gap:14px}
+.done h3{font-size:1.875rem;font-weight:800}
+.done p{color:var(--muted);max-width:44ch}
+
+/* Footer */
+.foot{border-top:1px solid var(--line);padding-block:40px 48px;padding-bottom:max(48px,env(safe-area-inset-bottom,0px))}
+.foot-row{display:grid;justify-items:center;gap:12px;text-align:center}
+.foot img{width:182px}
+
+/* Small screens */
+@media (max-width:820px){
+  .cards{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .about-text p:not(.label):not(.role){margin-inline:auto}
+  .creds{justify-items:start;width:fit-content;margin-inline:auto;text-align:left}
+  .portrait{width:220px;height:220px}
+  .form-wrap{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .nav{display:none}
+  .brand-word{width:128px}
+  .row{grid-template-columns:1fr}
+  .hero{min-height:auto;padding-block:56px 64px}
+  .hero-mark{width:104px;height:104px}
+  .cta{width:100%}
+  .cta .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn{transition:none}
+}
