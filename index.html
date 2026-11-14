@@ -35,10 +35,10 @@
 
 <main id="main">
 
-<section class="hero" id="top" aria-labelledby="page-title">
-  <!-- Background video: add assets/hero.mp4 and assets/hero.jpg, then set data-video="on" on this section. -->
+<section class="hero" id="top" aria-labelledby="page-title" data-video="on">
+  <!-- Background video. Set data-video="off" to turn it off. -->
   <div class="hero-media" aria-hidden="true">
-    <video class="hero-video" muted loop playsinline preload="none" data-src="assets/hero.mp4"></video>
+    <video class="hero-video" muted loop playsinline preload="none" poster="assets/hero.jpg" data-src="assets/hero.mp4"></video>
   </div>
   <div class="hero-tint" aria-hidden="true"></div>
   <div class="wrap hero-inner">
@@ -51,6 +51,7 @@
       <a class="btn btn-line" href="program.html">See the program</a>
     </div>
   </div>
+  <p class="hero-note">Concept renderings of the planned campus</p>
 </section>
 
 <section class="band" aria-label="Explore">

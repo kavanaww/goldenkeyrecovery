@@ -177,3 +177,10 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);bo
   .nav a{font-size:.875rem;letter-spacing:.06em;padding-block:4px}
 }
 @media (prefers-reduced-motion:reduce){.tile{transition:none}.tile:hover{transform:none}}
+
+/* Hero video */
+.hero[data-video="on"]{background:var(--bg)}
+.hero[data-video="on"] .hero-tint{background:linear-gradient(180deg,rgba(15,14,11,.66) 0%,rgba(15,14,11,.58) 50%,rgba(15,14,11,.9) 100%)}
+.hero[data-video="on"] h1,.hero[data-video="on"] .lead,.hero[data-video="on"] .label{text-shadow:0 2px 18px rgba(0,0,0,.75)}
+.hero-note{display:none}
+.hero[data-video="on"] .hero-note{display:block;position:absolute;right:16px;bottom:12px;margin:0;font-size:.75rem;letter-spacing:.04em;color:var(--muted);background:rgba(15,14,11,.6);padding:3px 9px;border-radius:999px}
