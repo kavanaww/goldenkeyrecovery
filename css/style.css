@@ -184,3 +184,8 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);bo
 .hero[data-video="on"] h1,.hero[data-video="on"] .lead,.hero[data-video="on"] .label{text-shadow:0 2px 18px rgba(0,0,0,.75)}
 .hero-note{display:none}
 .hero[data-video="on"] .hero-note{display:block;position:absolute;right:16px;bottom:12px;margin:0;font-size:.75rem;letter-spacing:.04em;color:var(--muted);background:rgba(15,14,11,.6);padding:3px 9px;border-radius:999px}
+
+/* About: stronger bio */
+.bio-lead{font-family:var(--display);font-weight:600;font-size:clamp(1.3rem,2.6vw,1.6rem);line-height:1.25;color:var(--fg) !important;margin-bottom:14px}
+.about-text p:not(.label):not(.role):not(.bio-lead){color:var(--fg);font-size:1.125rem}
+.creds li{font-weight:600}
