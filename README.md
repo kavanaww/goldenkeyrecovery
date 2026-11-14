@@ -2,7 +2,7 @@
 
 Website for Golden Key Recovery LLC, Troy, Missouri. Plain HTML, CSS and JS, hosted on GitHub Pages.
 
-- `index.html` — the page
+- `index.html`, `program.html`, `about.html`, `admissions.html` — the four pages
 - `css/style.css` — styles and brand colors
 - `js/main.js` — form check and background video loader
 - `assets/` — logo, fonts, photos, video

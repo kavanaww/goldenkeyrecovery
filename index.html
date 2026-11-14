@@ -9,7 +9,6 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#0F0E0B">
 <link rel="icon" href="assets/favicon.png">
-<link rel="preload" href="assets/fonts/saira-semi-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -20,15 +19,17 @@
 
 <header class="head">
   <div class="wrap head-row">
-    <a class="brand" href="#top" aria-label="Golden Key Recovery, back to top">
+    <a class="brand" href="index.html" aria-label="Golden Key Recovery home">
       <img class="brand-mark" src="assets/mark.png" alt="" width="44" height="44">
       <img class="brand-word" src="assets/wordmark.png" alt="Golden Key Recovery" width="156" height="30">
     </a>
-    <nav class="nav" aria-label="Page sections">
-      <a href="#program">Program</a>
-      <a href="#about">About</a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="program.html">Program</a>
+      <a href="about.html">About</a>
+      <a href="admissions.html">Admissions</a>
     </nav>
-    <a class="btn btn-gold btn-sm" href="#admissions">Get help</a>
+    <a class="btn btn-gold btn-sm head-cta" href="admissions.html">Get help</a>
   </div>
 </header>
 
@@ -46,139 +47,34 @@
     <h1 id="page-title">Residential addiction treatment.</h1>
     <p class="lead">A place to live, a daily program, and a team that has been where you are.</p>
     <div class="cta">
-      <a class="btn btn-gold" href="#admissions">Start admissions</a>
-      <a class="btn btn-line" href="#program">See the program</a>
+      <a class="btn btn-gold" href="admissions.html">Start admissions</a>
+      <a class="btn btn-line" href="program.html">See the program</a>
     </div>
   </div>
 </section>
 
-<section class="band" id="program" aria-labelledby="h-program">
+<section class="band" aria-label="Explore">
   <div class="wrap">
-    <p class="label">The program</p>
-    <h2 id="h-program">Live here. Do the work here.</h2>
-    <ul class="cards">
-      <li class="card">
+    <ul class="tiles">
+      <li><a class="tile" href="program.html">
         <span class="num">01</span>
-        <h3>Live on campus</h3>
-        <p>A furnished home on a quiet campus in Lincoln County, with staff living on site.</p>
-      </li>
-      <li class="card">
+        <h2>The program</h2>
+        <p>Live on campus with treatment every day.</p>
+        <span class="go">See the program <span aria-hidden="true">&rarr;</span></span>
+      </a></li>
+      <li><a class="tile" href="about.html">
         <span class="num">02</span>
-        <h3>Treatment every day</h3>
-        <p>One-on-one counseling and group sessions built around staying sober for good.</p>
-      </li>
-      <li class="card">
+        <h2>About us</h2>
+        <p>Meet the clinical director behind Golden Key.</p>
+        <span class="go">Meet Moose <span aria-hidden="true">&rarr;</span></span>
+      </a></li>
+      <li><a class="tile" href="admissions.html">
         <span class="num">03</span>
-        <h3>Recovery community</h3>
-        <p>Recovery meetings on campus every night, with faith-based options for those who want them.</p>
-      </li>
+        <h2>Admissions</h2>
+        <p>Tell us what is going on and we will reach out.</p>
+        <span class="go">Get started <span aria-hidden="true">&rarr;</span></span>
+      </a></li>
     </ul>
-  </div>
-</section>
-
-<section class="band band-alt" id="about" aria-labelledby="h-about">
-  <div class="wrap about">
-    <img class="portrait" src="assets/moose.jpg" alt="Timothy &ldquo;Moose&rdquo; Kavanagh" width="280" height="280">
-    <div class="about-text">
-      <p class="label">About</p>
-      <h2 id="h-about">Timothy &ldquo;Moose&rdquo; Kavanagh</h2>
-      <p class="role">Clinical Director</p>
-      <p>Moose has been sober for 14 years and has worked in recovery since 2013. He has counseled people through addiction, run sober living homes for a decade, and built Golden Key to be the program he would want for his own family.</p>
-      <ul class="creds">
-        <li>Certified Reciprocal Alcohol and Drug Counselor (CRADC)</li>
-        <li>Credentialed clinical supervisor</li>
-        <li>14 years in recovery</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="band" id="admissions" aria-labelledby="h-adm">
-  <div class="wrap form-wrap">
-    <div class="form-head">
-      <p class="label">Admissions</p>
-      <h2 id="h-adm">Tell us what is going on.</h2>
-      <p>Fill this out for yourself or for someone you love. We will reach out to talk through next steps.</p>
-    </div>
-
-    <form id="inquiry" class="form" novalidate>
-      <div class="field">
-        <label for="f-name">Your name</label>
-        <input id="f-name" name="name" type="text" autocomplete="name" required>
-      </div>
-      <div class="row">
-        <div class="field">
-          <label for="f-phone">Phone</label>
-          <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
-        </div>
-        <div class="field">
-          <label for="f-email">Email <span class="opt">(optional)</span></label>
-          <input id="f-email" name="email" type="email" autocomplete="email">
-        </div>
-      </div>
-      <div class="row">
-        <div class="field">
-          <label for="f-who">Who needs help?</label>
-          <select id="f-who" name="who" required>
-            <option value="" selected disabled>Choose one</option>
-            <option>Me</option>
-            <option>My son or daughter</option>
-            <option>My spouse or partner</option>
-            <option>Another family member or friend</option>
-            <option>I am a referring professional</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="f-drug">Drug of choice</label>
-          <select id="f-drug" name="substance" required>
-            <option value="" selected disabled>Choose one</option>
-            <option>Alcohol</option>
-            <option>Opioids or fentanyl</option>
-            <option>Meth or other stimulants</option>
-            <option>Benzodiazepines</option>
-            <option>Marijuana</option>
-            <option>More than one</option>
-            <option>Something else</option>
-          </select>
-        </div>
-      </div>
-      <div class="row">
-        <div class="field">
-          <label for="f-last">Last use</label>
-          <select id="f-last" name="last_use">
-            <option value="" selected disabled>Choose one</option>
-            <option>Today or yesterday</option>
-            <option>Within the past week</option>
-            <option>Within the past month</option>
-            <option>More than a month ago</option>
-            <option>Not sure</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="f-when">How soon is help needed?</label>
-          <select id="f-when" name="timing">
-            <option value="" selected disabled>Choose one</option>
-            <option>Right away</option>
-            <option>Within a week</option>
-            <option>Within a month</option>
-            <option>Just gathering information</option>
-          </select>
-        </div>
-      </div>
-      <div class="field">
-        <label for="f-msg">Anything else we should know? <span class="opt">(optional)</span></label>
-        <textarea id="f-msg" name="message" rows="4"></textarea>
-      </div>
-      <p class="form-error" id="form-error" role="alert" hidden>Please add your name, a phone number, who needs help, and drug of choice.</p>
-      <button class="btn btn-gold btn-wide" type="submit">Request a call</button>
-      <p class="fine">Your information is confidential.</p>
-    </form>
-
-    <div class="done" id="done" role="status" tabindex="-1" hidden>
-      <img src="assets/mark.png" alt="" width="72" height="72">
-      <h3>Thank you<span id="done-name"></span>.</h3>
-      <p>This is a preview of the Golden Key Recovery site. Online requests are not being collected yet, so nothing you entered was sent or saved.</p>
-    </div>
   </div>
 </section>
 
@@ -187,6 +83,12 @@
 <footer class="foot">
   <div class="wrap foot-row">
     <img src="assets/wordmark.png" alt="Golden Key Recovery" width="182" height="35">
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="program.html">Program</a>
+      <a href="about.html">About</a>
+      <a href="admissions.html">Admissions</a>
+    </nav>
     <p>Golden Key Recovery LLC &middot; Troy, Missouri</p>
     <p class="fine">&copy; 2026 Golden Key Recovery LLC. All rights reserved.</p>
   </div>
