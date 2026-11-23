@@ -195,3 +195,12 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);bo
 .social a{display:grid;place-items:center;width:48px;height:48px;border:1.5px solid var(--line);border-radius:50%;transition:border-color .15s,background .15s}
 .social a:hover{border-color:var(--gold);background:rgba(232,200,103,.12)}
 .social img{width:26px;height:26px}
+
+/* Privacy policy and form consent */
+.policy{max-width:70ch}
+.policy h2{font-size:1.5rem;margin-top:36px}
+.policy p,.policy ul{margin-top:12px;color:var(--muted)}
+.policy ul{padding-left:1.25em;display:grid;gap:6px}
+.policy a{color:var(--gold)}
+.check{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;font-size:.875rem;line-height:1.45;color:var(--muted)}
+.check input{width:20px;height:20px;margin-top:2px;accent-color:var(--gold)}
